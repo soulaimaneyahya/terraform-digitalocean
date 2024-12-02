@@ -7,12 +7,12 @@ terraform init
 
 ### Apply Configuration
 ```bash
-terraform plan
-terraform plan --out=planfile
+terraform plan -var "pvt_key=$HOME/.ssh/terraform_ssh"
+terraform plan --out=planfile -var "pvt_key=$HOME/.ssh/terraform_ssh"
 ```
 
 ```bash
-terraform apply
+terraform apply -var "pvt_key=$HOME/.ssh/terraform_ssh"
 ```
 
 ### Targeting module
