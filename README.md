@@ -7,8 +7,8 @@ terraform init
 
 ### Apply Configuration
 ```bash
-terraform plan -var "pvt_key=$HOME/.ssh/terraform_ssh"
-terraform plan --out=planfile -var "pvt_key=$HOME/.ssh/terraform_ssh"
+terraform plan -var="pvt_key=$(cat $HOME/.ssh/terraform_ssh)"
+terraform plan --out=planfile -var="pvt_key=$(cat $HOME/.ssh/terraform_ssh)"
 ```
 
 ```bash
